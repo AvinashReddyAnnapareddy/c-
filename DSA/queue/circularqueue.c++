@@ -14,26 +14,18 @@ public:
         arr = new int[size];
         front = rear = -1;
     }
-
-   
     bool isEmpty() {
         return front == -1;
     }
-
-    
     bool isFull() {
         return (rear + 1) % size == front;
     }
-
-
     void push(int data) {
         if (isFull()) {
             cout << "Queue is full\n";
             return;
         }
-
-       
-        if (isEmpty()) {
+    if (isEmpty()) {
             front = rear = 0;
         } else {
             rear = (rear + 1) % size;
@@ -41,8 +33,6 @@ public:
 
         arr[rear] = data;
     }
-
-  
     void pop() {
         if (isEmpty()) {
             cout << "Queue is empty\n";
